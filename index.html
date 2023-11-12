@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Форма товара</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<form id="productForm">
+    <input type="text" id="manufacturer" name="manufacturer" placeholder="Производитель">
+    <input type="text" id="name" name="name" placeholder="Наименование">
+    <input type="number" id="price" name="price" placeholder="Цена">
+    <input type="number" id="quantity" name="quantity" placeholder="Количество">
+    <button type="submit">Добавить</button>
+</form>
+
+<table id="productsTable">
+    <thead>
+        <tr>
+            <th onclick="sortTable(0)">Производитель</th>
+            <th onclick="sortTable(1)">Наименование</th>
+            <th onclick="sortTable(2)">Цена</th>
+            <th onclick="sortTable(3)">Количество</th>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="2">Итого:</td>
+            <td id="totalPrice"></td>
+            <td id="totalQuantity"></td>
+        </tr>
+    </tfoot>
+</table>
+
+<script src="script.js"></script>
+</body>
+</html>
